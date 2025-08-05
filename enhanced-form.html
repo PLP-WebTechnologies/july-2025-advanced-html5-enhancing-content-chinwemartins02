@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header, footer {
+            background: #007BFF;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 1rem;
+        }
+        section {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #007BFF;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        th {
+            background: #007BFF;
+            color: white;
+        }
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        label {
+            display: block;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        img {
+            max-width: 100%;
+            height: 150px;
+            width: 200px;
+            margin-bottom: 10px;
+            display: block;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Enhanced HTML5 Page with Form</h1>
+    <p>Showcasing Lists, Tables, Media & a Validated HTML5 Form</p>
+</header>
+
+<main>
+    <!-- Showcase Section -->
+    <section>
+        <h2>My Favorite Programming Languages</h2>
+        <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>HTML & CSS</li>
+            <li>Java</li>
+        </ul>
+
+        <h3>Languages Popularity Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Year Created</th>
+                    <th>Main Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Python</td>
+                    <td>1991</td>
+                    <td>Data Science, Web Development</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>1995</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>HTML & CSS</td>
+                    <td>1993</td>
+                    <td>Web Structure & Styling</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Sample Media</h3>
+        <p>Here's an image and a short audio clip for demonstration:</p>
+        <img src="images/html5.jpg" alt="Sample Placeholder Image">
+        <video controls>
+            <source src="https://www.youtube.com/watch?v=mzPxo7Y6JyA" type="video/mp4">
+            Your browser does not support the audio element.
+        </video>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+2348012345678" pattern="^\+?\d{10,15}$" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Your username" required minlength="5">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Min. 8 characters" required minlength="8">
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required minlength="8">
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Prefer not to say</option>
+                </select>
+
+                <label>Subscription:</label>
+                <input type="radio" id="free" name="subscription" value="free" required>
+                <label for="free">Free Plan</label>
+                <input type="radio" id="premium" name="subscription" value="premium">
+                <label for="premium">Premium Plan</label>
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us a bit about yourself..."></textarea>
+            </fieldset>
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced HTML5 Form Example | Designed for Usability & Accessibility</p>
+</footer>
+
+</body>
+</html>
